@@ -1,0 +1,348 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(111, 55%, 64%, 0.8),
+      hsla(160, 64%, 43%, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* background-attachment: fixed; */
+  clip-path: polygon(0 0, 100% 0, 100% 91%, 0% 100%);
+}
+
+/* --------------heading--------------- */
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 1rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary--sub {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  display: block;
+  animation: moveInRight ease-out 1s;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.logo {
+  height: 35px;
+}
+
+/* ---------button---------------- */
+.btn:link,
+.btn:visited {
+  background-color: #fff;
+  color: #777;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 45px;
+  display: inline-block;
+  border-radius: 30px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translate(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+/*----------------------Animations---------------------- */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*------------------- Second Page ----------------- */
+.webDev {
+  position: relative;
+  height: 85vh;
+  margin: 0 15rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.webDev-desc {
+  display: inline-block;
+  padding: 2rem;
+  width: 60vw;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.webDev-img {
+  position: relative;
+  top: 3rem;
+  right: 2rem;
+  z-index: -1;
+}
+
+.webDev-desc p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+
+.webDev-img img {
+  height: 100%;
+  /* border-radius: 8px; */
+  display: block;
+  margin: 0 auto;
+  transition: 100ms ease-in;
+}
+
+/* -----------Third Page------------- */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 95vh;
+  gap: 1rem;
+  padding: 1rem;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(111, 55%, 64%, 0.9),
+      hsla(160, 64%, 43%, 0.9)
+    ),
+    url(../img/skills.jpg);
+  clip-path: polygon(0 8%, 100% 0, 100% 90%, 0% 100%);
+  position: relative;
+}
+
+.skill {
+  background-color: #89f7fe;
+  color: white;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  height: 30rem;
+  width: 20rem;
+  padding: 1rem;
+  transition-duration: 1s;
+  transition-property: all;
+}
+
+.skill .skill-icon {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.skill .title {
+  font-size: 2rem;
+}
+
+.skill .desc {
+  color: black;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+.skill:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ----Contact------ */
+.contact {
+  height: 50vh;
+  margin: 0 auto;
+  margin-top: 5rem;
+  width: 50vw;
+}
+
+.contact form legend {
+  color: black;
+  font-weight: 700;
+}
+
+/* ----Footer------ */
+footer {
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-size: 1rem;
+  bottom: -2rem;
+}
+
+/* ----Advanced------ */
+
+/* 
+  Add JS Animation to the page
+Get all js-scroll elements on the page
+Fade out elements
+Detect when the element is within the viewport
+Assign the scrolled class name to the element if it is in view. */
+
+.scrollable {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.scrollable.scrolled {
+  opacity: 1;
+}
+
+.scrolled.fade-in {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.scrolled.slide-in-left {
+  animation: slide-in-left 1s ease-in-out both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
