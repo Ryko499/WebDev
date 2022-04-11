@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icon-font.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="index.js" defer></script>
+    <title>Web development| Yotam</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo-box">
+        <img src="img/logo.svg" alt="logo" class="logo" />
+      </div>
+      <div class="text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Website</span>
+          <span class="heading-primary--sub">is where magic happens</span>
+        </h1>
+        <a href="#" class="btn btn-white btn-animated">discover skills</a>
+      </div>
+    </header>
+
+    <section class="webDev">
+      <div class="webDev-desc scrollable slide-in-left">
+        <p>
+          Web development refers to the building, creating, and maintaining of
+          websites. It includes aspects such as web design, web publishing, web
+          programming, and database management. It is the creation of an
+          application that works over the internet i.e. websites. Web
+          development is the work involved in developing a website for the
+          Internet (World Wide Web) or an intranet (a private network). Web
+          development can range from developing a simple single static page of
+          plain text to complex web applications, electronic businesses, and
+          social network services. A more comprehensive list of tasks to which
+          Web development commonly refers, may include Web engineering, Web
+          design, Web content development, client liaison,
+          client-side/server-side scripting, Web server and network security
+          configuration, and e-commerce development.
+        </p>
+      </div>
+      <div class="webDev-img">
+        <img src="./img/coding.jpg" alt="Photo by Ben Kolde Unsplash" />
+      </div>
+    </section>
+
+    <section class="skills">
+      <div class="skill scrollable fade-in">
+        <p class="skill-icon"><i class="fab fa-html5 fa-2xl"></i></p>
+        <p class="title">HTML</p>
+        <p class="desc">
+          HTML stands for hypertext markup language. It uses tags or plain text
+          with special markings to define the sections of a page, such as
+          headers and footers, and other elements, including tables and images.
+        </p>
+      </div>
+
+      <div class="skill scrollable fade-in">
+        <p class="skill-icon"><i class="fa-brands fa-css3 fa-2xl"></i></p>
+
+        <p class="title">CSS</p>
+        <p class="desc">
+          Cascading Style Sheets, fondly referred to as CSS, is a simple design
+          language intended to simplify the process of making web pages
+          presentable. CSS handles the look and feel part of a web page.
+        </p>
+      </div>
+      <div class="skill scrollable fade-in">
+        <p class="skill-icon"><i class="fa-brands fa-js fa-2xl"></i></p>
+        <p class="title">JavaScript</p>
+        <p class="desc">
+          JavaScript is a scripting or programming language that allows you to
+          implement complex features on web pages. It is used both on the
+          client-side and server-side that allows you to make web pages
+          interactive.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <form action="formSuccess.html">
+        <legend>Lets connect</legend>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >I will reach out to you with this email</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>
+        Copyright &copy; 2022 |
+        <a href="#">Authored by Yotam</a>
+      </p>
+    </footer>
+  </body>
+</html>
